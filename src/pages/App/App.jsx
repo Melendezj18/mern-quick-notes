@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import NewNotePage from '../NewNotePage/NewNotePage';
+import NoteListPage from '../NoteListPage/NoteListPage';
 import NavBar from '../components/NavBar/NavBar';
 import './App.css';
 
@@ -17,8 +17,7 @@ export default function App() {
 				<>
 					<NavBar user={user} setUser={setUser}/>
 					<Routes>
-						<Route path='/notes/new' element={<NewOrderPage />} />
-						<Route path='/' element={<OrderHistoryPage />} />
+						<Route path='/' element={<NoteListPage />} />
 					</Routes>
 				</>
 			) : (
